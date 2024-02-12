@@ -24,7 +24,7 @@ def openFile(nome_file):
 
 
 def saveFile(nome_file, dataFile):
-    with open ('Data.json', 'w') as f:
+    with open ('data.json', 'w') as f:
         json.dump(dataFile, f, indent=4)
 
 
@@ -44,7 +44,7 @@ def start(update: Update, context: CallbackContext):
 
     
 def search_user(update: Update, context: CallbackContext):
-    dataFile = openFile("Data.json")
+    dataFile = openFile("data.json")
     user_id = update.effective_user.id
 
     for user in dataFile:
@@ -61,13 +61,13 @@ def create_user(update: Update, context: CallbackContext, dataFile, user_id):
         user_name = update.effective_user.first_name
     new_user = {'id':user_id, 'name': user_name, 'lang':'it', 'favorite_places': []}
     dataFile.append(new_user)
-    saveFile("Data.json", dataFile)
+    saveFile("data.json", dataFile)
 
     return "created"
 
 def remove_user(update: Update):
     try: 
-        dataFile = openFile("Data.json")
+        dataFile = openFile("data.json")
         user_id = update.effective_user.id
 
         for user in dataFile:
@@ -75,7 +75,7 @@ def remove_user(update: Update):
                 dataFile.remove(user)
                 break
 
-        saveFile("Data.json", dataFile)
+        saveFile("data.json", dataFile)
         return True
     except Exception as e:
         print("Rimozione dell'utente non riuscita... "+str(e))
@@ -83,7 +83,7 @@ def remove_user(update: Update):
 
 
 def is_not_fav(update: Update, context: CallbackContext):
-    dataFile = openFile("Data.json")
+    dataFile = openFile("data.json")
     user_id = update.effective_user.id
     location_name = context.user_data['user_message']
 
@@ -147,11 +147,11 @@ def button_callback(update: Update, context: CallbackContext):
     
     if data == "add_fav":
         try:
-            dataFile = openFile("Data.json")
+            dataFile = openFile("data.json")
             for user in dataFile:
                 if user["id"] == user_id:
                     user["favorite_places"].append(location)
-                    saveFile("Data.json", dataFile)
+                    saveFile("data.json", dataFile)
                     inline_button = [[InlineKeyboardButton("✖️ Rimuovi dai preferiti", callback_data="rem_fav"), 
                                         InlineKeyboardButton("💭 Air pollution", callback_data="air_pol")]]
                     context.bot.edit_message_reply_markup(chat_id=query.message.chat_id, message_id=query.message.message_id, reply_markup=InlineKeyboardMarkup(inline_button))
@@ -163,12 +163,12 @@ def button_callback(update: Update, context: CallbackContext):
 
     elif data == "rem_fav":
         try:
-            dataFile = openFile("Data.json")
+            dataFile = openFile("data.json")
             for user in dataFile:
                 if user["id"] == user_id:
                     if location in user['favorite_places']:
                         user['favorite_places'].remove(location)
-                        saveFile("Data.json", dataFile)
+                        saveFile("data.json", dataFile)
                         inline_button = [[InlineKeyboardButton("➕ Aggiungi ai preferiti", callback_data="add_fav"), 
                                             InlineKeyboardButton("💭 Air pollution", callback_data="air_pol")]]
                         context.bot.edit_message_reply_markup(chat_id=query.message.chat_id, message_id=query.message.message_id, reply_markup=InlineKeyboardMarkup(inline_button))
@@ -206,7 +206,7 @@ def button_callback(update: Update, context: CallbackContext):
 def fav_places(update: Update, context: CallbackContext):
     user_id = update.effective_user.id
 
-    dataFile = openFile("Data.json")
+    dataFile = openFile("data.json")
 
     buttons = []
 
@@ -251,7 +251,7 @@ def languages_buttons(chat_text, update: Update, context: CallbackContext):
 
 
 def change_user_language(lang_tag, update: Update, context: CallbackContext):
-    dataFile = openFile("Data.json")
+    dataFile = openFile("data.json")
 
     user_id = update.effective_user.id
 
@@ -259,7 +259,7 @@ def change_user_language(lang_tag, update: Update, context: CallbackContext):
         for user in dataFile:
             if user["id"] == user_id:
                 user["lang"] = lang_tag
-                saveFile("Data.json", dataFile)
+                saveFile("data.json", dataFile)
 
                 languages_buttons("Lingua cambiata ✅", update, context)
                 return True
@@ -273,7 +273,7 @@ def change_user_language(lang_tag, update: Update, context: CallbackContext):
     
     
 def get_user_language(update: Update, context: CallbackContext):
-    dataFile = openFile("Data.json")
+    dataFile = openFile("data.json")
 
     user_id = update.effective_user.id
     try:
