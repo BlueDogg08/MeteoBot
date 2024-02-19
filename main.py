@@ -5,14 +5,15 @@ import json
 from telebot import TeleBot
 
 from os.path  import basename
+import os
 from telegram import *
 from telegram.ext import *
 from requests import *
 
 
-TOKEN = "INSERT YOUR TELEGRAM TOKEN"
-OpenWeather_ApiKey = "INSERT YOUR OpenWeather KEY"
-BingMaps_ApiKey = "INSERT YOUR BingMaps KEY"
+TOKEN = os.environ.get("TELEGRAM_TOKEN")
+OpenWeather_ApiKey = os.environ.get("OPENW_KEY")
+BingMaps_ApiKey = os.environ.get("BINGM_KEY")
 
 
 
