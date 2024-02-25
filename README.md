@@ -5,6 +5,7 @@ A simple weather bot located in telegram, convenient and easy to use.
 
 A telegram bot programmed in python 🐍 that uses OpenWeatherMap ⛅ and BingMaps 🗺️ api.  The first is used to obtain weather information such as temperature, humidity, wind speed and general weather conditions (translatable into 6 languages that can be changed from the settings).  BingMaps offers a free service of satellite photographs, which are processed and sent via chat to the user who requests any place in the world.
 
+
 ## Api creation 🔑
 
 Register on the OpenWeatherMap [website](https://home.openweathermap.org/users/sign_in)👤 and access the Api Keys 🔑 [page](https://home.openweathermap.org/api_keys).  
