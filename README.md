@@ -15,13 +15,13 @@ You also need to create a telegram bot via [BotFather](https://t.me/BotFather) u
 
 ## Libraries to import 📚
 
-Import Requests
+Import Requests -> 
 `pip install requests`
 
-Import Telebot
+Import Telebot -> 
 `pip install telebot`
 
-Import Telegram
+Import Telegram -> 
 `pip install telegram`
 
 
