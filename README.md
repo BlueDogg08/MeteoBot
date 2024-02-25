@@ -7,7 +7,7 @@ A telegram bot programmed in python 🐍 that uses OpenWeatherMap ⛅ and BingMa
 
 ## Api creation 🔑
 
-Register on the [OpenWeatherMap website](https://home.openweathermap.org/users/sign_in)👤 and access the [ApiKeys 🔑 Page](https://home.openweathermap.org/api_keys).  
+Register on the [OpenWeatherMap website](https://home.openweathermap.org/users/sign_in)👤 and access the Api Keys 🔑 [page](https://home.openweathermap.org/api_keys).  
 As for BingMaps, sign up [here](https://www.bingmapsportal.com/)👤 and to get the API key 🔑 [here](https://www.bingmapsportal.com/Application).
 
 You also need to create a telegram bot via [BotFather](https://t.me/BotFather) using the `/newbot` command, edit the bot and copying the Api Token 🔑.
