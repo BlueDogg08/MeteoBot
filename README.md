@@ -5,15 +5,6 @@ A simple weather bot located in telegram, convenient and easy to use.
 
 A telegram bot programmed in python 🐍 that uses OpenWeatherMap ⛅ and BingMaps 🗺️ api.  The first is used to obtain weather information such as temperature, humidity, wind speed and general weather conditions (translatable into 6 languages that can be changed from the settings).  BingMaps offers a free service of satellite photographs, which are processed and sent via chat to the user who requests any place in the world.
 
-
-⚠️ **Attention: Bing Maps Deprecation Warning!**
-
-This project uses **Bing Maps APIs**, which may become **deprecated** in the future. Microsoft has transitioned to **Azure Maps**, which is likely to replace Bing Maps entirely.
-
-🔗 We recommend migrating to [Azure Maps](https://azure.com/maps) to ensure the continued functionality of this project.  
-💡 **Note**: Azure Maps is a paid service. Please check the [official documentation](https://learn.microsoft.com/en-us/azure/azure-maps/) for pricing and usage details.
-
-
 ## Api creation 🔑
 
 Register on the OpenWeatherMap [website](https://home.openweathermap.org/users/sign_in)👤 and access the Api Keys 🔑 [page](https://home.openweathermap.org/api_keys).  
@@ -21,6 +12,10 @@ As for BingMaps, sign up [here](https://www.bingmapsportal.com/)👤 and to get 
 
 You also need to create a telegram bot via [BotFather](https://t.me/BotFather) using the `/newbot` command, editing the bot and copying the Api Token 🔑.
 
+> [!NOTE]
+> This project uses Bing Maps APIs, which might be deprecated in the future. Microsoft has transitioned to Azure Maps, which is likely to replace Bing Maps entirely. 
+> 
+> We recommend migrating to [Azure Maps](https://azure.com/maps) for continued functionality. Please note that Azure Maps is a paid service. Check the [official documentation](https://learn.microsoft.com/en-us/azure/azure-maps/) for details.
 
 ## Libraries to import 📚
 
