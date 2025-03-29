@@ -1,6 +1,12 @@
 # MeteoBot🌤
 A simple weather bot located in telegram, convenient and easy to use.
 
+
+
+https://github.com/user-attachments/assets/a86d6c38-9aaa-4faf-8fbc-36a7001a423f
+
+
+
 ## Description 📃
 
 A telegram bot programmed in python 🐍 that uses OpenWeatherMap ⛅ and BingMaps 🗺️ api.  The first is used to obtain weather information such as temperature, humidity, wind speed and general weather conditions (translatable into 6 languages that can be changed from the settings).  BingMaps offers a free service of satellite photographs, which are processed and sent via chat to the user who requests any place in the world.
